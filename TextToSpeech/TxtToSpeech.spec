@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['TxtToSpeech.py'],
-             pathex=['/home/porter/文档/github workspace/TextToSpeech_API_test/TextToSpeech'],
+             pathex=['D:\\Program Designed\\TextToSpeech_API_test\\TextToSpeech'],
              binaries=[],
              datas=[],
              hiddenimports=[],

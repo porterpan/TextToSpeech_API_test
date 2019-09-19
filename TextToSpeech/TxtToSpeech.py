@@ -54,7 +54,7 @@ class TxtToSpeech(QDialog, Ui_TxtToSpeech):
         print(filename, filetype)
 
         self.user_dict = {}
-        with open(filename, 'r') as file_to_read:
+        with open(filename, 'r', encoding='UTF-8') as file_to_read:
             while True:
                 lines = file_to_read.readline()  # 整行读取数据
                 if not lines:
