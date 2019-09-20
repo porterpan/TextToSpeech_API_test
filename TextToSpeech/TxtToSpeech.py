@@ -88,12 +88,15 @@ class TxtToSpeech(QDialog, Ui_TxtToSpeech):
             self.label_tips.setText("请求结果显示窗：")
         yuyin_app.yuyinhec(InText_neirong, self.voice_name_selecct[str_voice_name])
         self.textEdit_tips.setText("语音合成结果提示：\n"+yuyin_app.Erro_Tips)
-        os.system('./output.mp3')
+        #os.system('./output.mp3')
         file = r'./output.mp3'
-        pygame.mixer.init()
-        track = pygame.mixer.music.load(file)
+        try:
+            pygame.mixer.init()
+            track = pygame.mixer.music.load(file)
 
-        pygame.mixer.music.play()
+            pygame.mixer.music.play()
+        except:
+            self.textEdit_tips.setText("错误代码：\n"+yuyin_app.Erro_Tips)
         # time.sleep(5)
         # pygame.mixer.music.stop()
 
