@@ -17,6 +17,9 @@ import yuyinf
 from yuyinf import yuyi_hec
 import os
 
+import pygame
+import time
+
 class TxtToSpeech(QDialog, Ui_TxtToSpeech):
     """
     Class documentation goes here.
@@ -34,7 +37,11 @@ class TxtToSpeech(QDialog, Ui_TxtToSpeech):
         self.textEdit_tips.setVerticalScrollBarPolicy(0)
         self.textEdit_tips.setHorizontalScrollBarPolicy(0)
         self.textEdit_tips.setReadOnly(True)
+        self.textEdit_tips.setText("下拉选项中从讯飞小东开始，都是体验都是不错的，具体可以自己实验")
         self.label_tips.setText("请求结果显示窗：")
+        self.comboBox_voice_name.setCurrentText('讯飞小魏')
+        self.checkBox.setChecked(True)
+        self.checkBox.setEnabled(False)
         # self.comboBox_voice_name.scroll(5,2)
         self.voice_name_selecct = {
         '讯飞小燕': 'xiaoyan', '讯飞许久': 'aisjiuxu','讯飞小萍': 'aisxping', '讯飞小婧': 'aisjinger',
@@ -82,12 +89,13 @@ class TxtToSpeech(QDialog, Ui_TxtToSpeech):
         yuyin_app.yuyinhec(InText_neirong, self.voice_name_selecct[str_voice_name])
         self.textEdit_tips.setText("语音合成结果提示：\n"+yuyin_app.Erro_Tips)
         os.system('./output.mp3')
-        # url = QtCore.QUrl.fromLocalFile(r"output.mp3")
-        # content = QtMultimedia.QMediaContent(url)
-        # player = QtMultimedia.QMediaPlayer()
-        # player.setMedia(content)
-        # player.setVolume(50.0)
-        # player.play()
+        file = r'./output.mp3'
+        pygame.mixer.init()
+        track = pygame.mixer.music.load(file)
+
+        pygame.mixer.music.play()
+        # time.sleep(5)
+        # pygame.mixer.music.stop()
 
 
     @pyqtSlot()

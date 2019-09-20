@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_TxtToSpeech(object):
     def setupUi(self, TxtToSpeech):
         TxtToSpeech.setObjectName("TxtToSpeech")
-        TxtToSpeech.resize(542, 355)
+        TxtToSpeech.resize(567, 355)
         self.plainTextEdit = QtWidgets.QPlainTextEdit(TxtToSpeech)
         self.plainTextEdit.setGeometry(QtCore.QRect(280, 50, 261, 281))
         self.plainTextEdit.setObjectName("plainTextEdit")
@@ -35,7 +35,7 @@ class Ui_TxtToSpeech(object):
         self.pushButton_hec.setFont(font)
         self.pushButton_hec.setObjectName("pushButton_hec")
         self.comboBox_voice_name = QtWidgets.QComboBox(TxtToSpeech)
-        self.comboBox_voice_name.setGeometry(QtCore.QRect(70, 50, 101, 31))
+        self.comboBox_voice_name.setGeometry(QtCore.QRect(70, 50, 111, 31))
         self.comboBox_voice_name.setObjectName("comboBox_voice_name")
         self.comboBox_voice_name.addItem("")
         self.comboBox_voice_name.addItem("")
@@ -74,7 +74,7 @@ class Ui_TxtToSpeech(object):
         self.comboBox_voice_name.addItem("")
         self.comboBox_voice_name.addItem("")
         self.pushButton_load_file = QtWidgets.QPushButton(TxtToSpeech)
-        self.pushButton_load_file.setGeometry(QtCore.QRect(180, 50, 81, 31))
+        self.pushButton_load_file.setGeometry(QtCore.QRect(190, 50, 71, 31))
         font = QtGui.QFont()
         font.setFamily("宋体")
         font.setPointSize(12)
@@ -105,6 +105,9 @@ class Ui_TxtToSpeech(object):
         self.textEdit_tips.setEnabled(True)
         self.textEdit_tips.setGeometry(QtCore.QRect(10, 134, 251, 71))
         self.textEdit_tips.setObjectName("textEdit_tips")
+        self.label_2 = QtWidgets.QLabel(TxtToSpeech)
+        self.label_2.setGeometry(QtCore.QRect(20, 306, 241, 31))
+        self.label_2.setObjectName("label_2")
 
         self.retranslateUi(TxtToSpeech)
         QtCore.QMetaObject.connectSlotsByName(TxtToSpeech)
@@ -112,7 +115,7 @@ class Ui_TxtToSpeech(object):
     def retranslateUi(self, TxtToSpeech):
         _translate = QtCore.QCoreApplication.translate
         TxtToSpeech.setWindowTitle(_translate("TxtToSpeech", "语音合成系统"))
-        self.label_3.setText(_translate("TxtToSpeech", "语音合成系统V1.0"))
+        self.label_3.setText(_translate("TxtToSpeech", "语音合成系统V0.0.1"))
         self.checkBox.setText(_translate("TxtToSpeech", "是否保存MP3"))
         self.pushButton_hec.setText(_translate("TxtToSpeech", "语音合成"))
         self.comboBox_voice_name.setItemText(0, _translate("TxtToSpeech", "讯飞小燕"))
@@ -154,6 +157,7 @@ class Ui_TxtToSpeech(object):
         self.pushButton_load_file.setText(_translate("TxtToSpeech", "加载TXT"))
         self.label.setText(_translate("TxtToSpeech", "发音人："))
         self.checkBox_more.setText(_translate("TxtToSpeech", "太少,要更多"))
+        self.label_2.setText(_translate("TxtToSpeech", "<html><head/><body><p><span style=\" font-weight:600;\">软件</span><span style=\" font-weight:600; color:#0000ff;\">维护时间</span><span style=\" font-weight:600; color:#ff0000;\">9</span><span style=\" font-weight:600; color:#0000ff;\">月</span>，<span style=\" font-weight:600; color:#ff0000;\">过期不维护</span></p></body></html>"))
 
 
 if __name__ == "__main__":

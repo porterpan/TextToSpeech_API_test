@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>542</width>
+    <width>567</width>
     <height>355</height>
    </rect>
   </property>
@@ -33,7 +33,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>语音合成系统V1.0</string>
+    <string>语音合成系统V0.0.1</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox">
@@ -79,7 +79,7 @@
     <rect>
      <x>70</x>
      <y>50</y>
-     <width>101</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
@@ -267,9 +267,9 @@
   <widget class="QPushButton" name="pushButton_load_file">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>190</x>
      <y>50</y>
-     <width>81</width>
+     <width>71</width>
      <height>31</height>
     </rect>
    </property>
@@ -348,6 +348,19 @@
      <width>251</width>
      <height>71</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>306</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;软件&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;维护时间&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;月&lt;/span&gt;，&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;过期不维护&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>
