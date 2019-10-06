@@ -59,7 +59,7 @@ class TxtToSpeech(QDialog, Ui_TxtToSpeech):
     def readtxt(self):
         filename, filetype = QFileDialog.getOpenFileName(self,"选取文件","./","Text Files (*.txt)")  # 设置文件扩展名过滤,注意用双分号间隔
         print(filename, filetype)
-
+        self.plainTextEdit.setPlainText("")
         self.user_dict = {}
         with open(filename, 'r', encoding='UTF-8') as file_to_read:
             while True:
